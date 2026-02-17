@@ -43,14 +43,22 @@ mobileMenuToggleBtn.addEventListener('click', () => {
 const mobileSidebarToggleBtn = document.getElementById("sidebar-button");
 const sidebar = document.getElementById("sidebar");
 const sidebarOverlay = document.getElementById("sidebar-overlay");
+const sidebarLinks = document.querySelectorAll(".sidebar-links li");
 
-mobileSidebarToggleBtn.addEventListener("click", () => {
-  // sidebar.classList.toggle("translate-x-0");
+mobileSidebarToggleBtn.addEventListener("click", (e) => {
   sidebar.classList.toggle("-translate-x-52");
   sidebar.style.transition = "all .5s ease-in-out";
   sidebarOverlay.classList.toggle("hidden");
-  // sidebar.classList.toggle("hidden");
-  // sidebarOverlay.classList.toggle("pointer-events-none");
 });
+
+// Close the sidebar when a link is clicked
+sidebarLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    sidebar.classList.add("-translate-x-52");
+    sidebarOverlay.classList.add("hidden");
+  });
+});
+
+
 
 
