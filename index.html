@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- EXTERNAL LINKS  -->
+     <!-- FontAwesome 6.5.1 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- INTERNAL LINKS -->
+    <link rel="stylesheet" href="./src/output.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-brand-white dark:bg-brand-dark-dark">
+    <!-- NAVBAR   -->
+    <nav
+      class="w-[calc(100%-20px)] h-16 px-10 flex flex-row items-center justify-between max-sm:hidden
+      justify-self-center fixed top-2.5 border rounded-xl border-brand-dark-dark/30 dark:border-brand-white/30 
+      backdrop-blur-2xl bg-transparent shadow-2xl shadow-brand-dark-dark/20 z-[9999] transition-colors">
+
+      <div class="logo text-2xl font-bold text-brand-dark-dark dark:text-brand-white">
+        <span class="logo-bracket">{</span>
+        CODE DRAW
+        <span class="logo-bracket">}</span>
+      </div>
+      <ul class="flex flex-row items-center gap-8 text-lg text-brand-dark-dark/70 dark:text-brand-white/70">
+        <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Home</a></li>
+        <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Courses</a></li>
+        <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Projects</a></li>
+        <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">About</a></li>
+        <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-4">
+        <button type="button" class="cursor-pointer w-10 h-10 rounded-full bg-brand-dark-dark/20 dark:bg-brand-white/20 flex items-center justify-center text-xl text-brand-dark-dark dark:text-brand-white transition-colors" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon text-3xl"></i>
+        </button>
+        <button class="btn-primary">Get Started <i class="fas fa-arrow-right ml-2"></i></button>
+      </div>
+
+    </nav>
+
+    <!-- MOBILE SIDEBAR -->
+     <aside class="max-lg:w-52  lg:hidden h-screen fixed top-0 left-0 max-sm:hidden
+     border rounded-r-xl border-brand-dark-dark/30 dark:border-brand-white/30 
+      backdrop-blur-2xl bg-transparent shadow-2xl shadow-brand-dark-dark/20 z-[9999] transition-colors ">
+
+      <!-- the profile section of the sidebar -->
+      <div class="profile w-full h-24 py-4 flex items-center gap-3 px-3 border-b border-brand-dark-dark/30 dark:border-brand-white/30 max-sm:gap-2 max-sm:px-2 max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:h-auto">
+        <img src="assets/images/profiles/05.jfif" class="w-14 h-14 rounded-full border border-brand-red" alt="" srcset="">
+        <div class="flex flex-col items-start justify-center gap-1">
+          <h3 class="text-sm text-brand-dark-dark dark:text-brand-white font-semibold">Latif Khradmand</h3>
+          <span class="text-xs text-brand-dark-dark/70 dark:text-brand-white/70">Student</span>
+        </div>
+      </div>
+
+      <!-- the dark mode toggle of the sidebar -->
+      <div class="w-full h-16 flex items-center justify-between gap-4 px-3 border-b border-brand-dark-dark/30 dark:border-brand-white/30 max-sm:justify-center">
+        <a href="#" class="max-sm:hidden cursor-pointer w-auto px-2.5 h-10 rounded-lg bg-brand-dark-dark/20 dark:bg-brand-white/20 flex items-center justify-center text-xl text-brand-dark-dark dark:text-brand-white transition-colors top-4 right-4">Dashboard</a> 
+        <button type="button" class="cursor-pointer w-10 h-10 rounded-full bg-brand-dark-dark/20 dark:bg-brand-white/20 flex items-center justify-center text-xl text-brand-dark-dark dark:text-brand-white transition-colors top-4 right-4" id="mobile-theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon text-3xl"></i>
+        </button>
+      </div>
+
+      <!-- the navigation section of the sidebar -->
+      <ul class="flex flex-col items-start justify-start gap-1.5 text-lg text-brand-dark-dark/70 dark:text-brand-white/70 px-1 py-6">
+        <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
+        hover:bg-brand-dark-dark/20 dark:hover:bg-brand-white/20 transition-colors w-full">
+          <i class="fas fa-home mr-2"></i><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Home</a>
+        </li>
+        <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
+        hover:bg-brand-dark-dark/20 dark:hover:bg-brand-white/20 transition-colors w-full">
+          <i class="fas fa-graduation-cap mr-2"></i><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Courses</a>
+        </li>
+        <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
+        hover:bg-brand-dark-dark/20 dark:hover:bg-brand-white/20 transition-colors w-full">
+          <i class="fas fa-project-diagram mr-2"></i><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Projects</a>
+        </li>
+        <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
+        hover:bg-brand-dark-dark/20 dark:hover:bg-brand-white/20 transition-colors w-full">
+          <i class="fas fa-info-circle mr-2"></i><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">About</a>
+        </li>
+        <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
+        hover:bg-brand-dark-dark/20 dark:hover:bg-brand-white/20 transition-colors w-full">
+          <i class="fas fa-envelope mr-2"></i><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Contact</a>
+        </li>
+      </ul>
+
+      <!-- the exit button of the sidebar -->
+       <button type="button" class="w-full"></button>
+     </aside>
+
+
+    <!-- MOBILE BOTTON NAVBAR -->
+      <nav class="w-screen h-16 fixed bottom-0 left-0 border-t border-brand-dark-dark/30 dark:border-brand-white/30 backdrop-blur-2xl bg-transparent shadow-2xl shadow-brand-dark-dark/20 z-[9999] transition-colors">
+        <ul class="w-full h-full flex items-center justify-around text-lg text-brand-dark-dark/70 dark:text-brand-white/70">
+          <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors"><i class="fas fa-home"></i></a></li>
+          <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors"><i class="fas fa-graduation-cap"></i></a></li>
+          <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors"><i class="fas fa-project-diagram"></i></a></li>
+          <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors"><i class="fas fa-info-circle"></i></a></li>
+          <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+        
+      </nav>
+
+
+    <!-- HERO  -->
+    <section class=" flex flex-5 lg:flex-6 flex-row pb-10 items-center justify-between gap-20 pt-20 w-screen h-screen max-sm:h-auto relative overflow-hidden max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:px-4 max-sm:gap-12">
+      <div
+        class="absolute top-0 -z-10 inset-0 w-full h-full [background-image:linear-gradient(to_right,var(--color-brand-dark)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-brand-dark)_1px,transparent_1px)]
+        dark:[background-image:linear-gradient(to_right,var(--color-brand-white)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-brand-white)_1px,transparent_1px)]
+         [background-size:200px_200px] max-sm:[background-size:50px_50px] max-lg:[background-size:100px_100px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#fff_60%,transparent_100%)] opacity-35"
+      ></div>
+
+      <!-- LEFT SECTION course title -->
+      <div class="flex-3 max-lg:flex-2 max-sm:w-full h-full flex flex-col items-start justify-center gap-8 max-lg:ml-10 lg:ml-20 max-sm:ml-2.5">
+        <h1
+          class="text-6xl font-bold text-brand-dark-dark dark:text-brand-white leading-[1.2] max-sm:text-4xl max-sm:text-center">
+          Master the Art of Coding with Code Draw
+        </h1>
+        <p class="text-xl text-brand-dark-dark/70 dark:text-brand-white/70 max-sm:text-center">
+          Unlock your coding potential with our comprehensive courses, expert
+          instructors, and hands-on projects. Join Code Draw today and start
+          your journey to becoming a coding pro!
+        </p>
+        <div class="flex gap-6 max-sm:justify-center max-sm:w-full">
+          <button class="btn-primary">Get Started</button>
+          <button class="btn-secondary">Learn More</button>
+        </div>
+
+        <!-- the current sources and studetns  -->
+        <div class="mt-8 flex items-center gap-6 bg-brand-dark-dark/10 dark:bg-brand-white/10 px-6 py-4 rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 
+        max-sm:flex-row max-sm:items-center max-sm:justify-evenly max-sm:gap-4 max-sm:w-full">
+          <div class="flex items-center gap-3 max-sm:w-full max-sm:flex-col max-sm:items-center max-sm:gap-2 max-sm:text-center">
+            <i class="fas fa-users text-brand-dark-dark dark:text-brand-white"></i>
+            <span class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">1.2K+ Students</span>
+          </div>
+          <div class="hidden max-sm:block h-20 w-2 bg-brand-dark-dark/30 dark:bg-brand-white/30"></div>
+          <div class="flex items-center gap-3 max-sm:w-full max-sm:flex-col max-sm:items-center max-sm:gap-2 max-sm:text-center">
+            <i class="fas fa-book text-brand-dark-dark dark:text-brand-white"></i>
+            <span class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">50+ Courses</span>
+          </div>
+          <div class="hidden max-sm:block h-20 w-2 bg-brand-dark-dark/30 dark:bg-brand-white/30"></div>
+          <div class="flex items-center gap-3 max-sm:w-full max-sm:flex-col max-sm:items-center max-sm:gap-2 max-sm:text-center">
+            <i class="fas fa-project-diagram text-brand-dark-dark dark:text-brand-white"></i>
+            <span class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">100+ Projects</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="h-full flex items-center justify-center flex-wrap flex-3 max-lg:flex-3 flex-row gap-8">
+        <div class="h-auto flex flex-1 flex-col items-center justify-center gap-11">
+          <img src="assets/images/designs/hero-cards/05.jpg" alt="" class="w-full h-auto object-cover rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 shadow-lg shadow-brand-dark-dark/20">
+        </div>
+        <div class="h-auto flex flex-1 flex-col items-center justify-center gap-11">
+          <img src="assets/images/designs/hero-cards/02.jpg" alt="" class="w-full h-auto object-cover rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 shadow-lg shadow-brand-dark-dark/20">
+          <img src="assets/images/designs/hero-cards/09.jfif" alt="" class="w-full h-auto object-cover rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 shadow-lg shadow-brand-dark-dark/20">
+        </div>
+        <div class="h-full flex flex-1 flex-col items-center justify-start gap-11 max-md:gap-6 max-lg:hidden">
+          <img src="assets/images/designs/hero-cards/07.jpg" alt="" class="w-full h-auto object-cover rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 shadow-lg shadow-brand-dark-dark/20">
+          <img src="assets/images/designs/hero-cards/08.jpg" alt="" class="w-full h-auto object-cover rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 shadow-lg shadow-brand-dark-dark/20">
+          <!-- <img src="assets/images/designs/hero-cards/08.jpg" alt="" class="w-full h-auto object-cover rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 shadow-lg shadow-brand-dark-dark/20">         -->
+        </div>
+      </div>
+    </section>
+
+    <!-- the supporting brands  -->
+    <section class="w-screen h-auto py-8 flex items-center justify-center gap-16 border-t border-b mb-6 border-brand-dark-dark/30 dark:border-brand-white/30">
+      <i class="fab fa-google text-3xl text-brand-dark-dark dark:text-brand-white"></i>
+      <i class="fab fa-microsoft text-3xl text-brand-dark-dark dark:text-brand-white"></i>
+      <i class="fab fa-apple text-3xl text-brand-dark-dark dark:text-brand-white"></i>
+      <i class="fab fa-amazon text-3xl text-brand-dark-dark dark:text-brand-white"></i>
+      <i class="fab fa-facebook text-3xl text-brand-dark-dark dark:text-brand-white"></i>
+      <i class="fab fa-github text-3xl text-brand-dark-dark dark:text-brand-white"></i>
+    </section>
+
+    <!-- the reward of code draw section  -->
+    <section class="w-screen h-auto py-16 flex items-center justify-center gap-20">
+      <div class="w-1/2 h-full flex flex-col items-start justify-center gap-8 ml-32">
+        <h2 class="text-4xl font-bold text-brand-dark-dark dark:text-brand-white leading-[1.2]">
+          Why Choose Code Draw?
+        </h2>
+        <p class="text-lg text-brand-dark-dark/70 dark:text-brand-white/70">
+          At Code Draw, we are committed to providing you with the best learning experience possible. Here’s why you should choose us:
+        </p>
+        <ul class="list-disc list-inside text-lg text-brand-dark-dark/70 dark:text-brand-white/70 flex flex-col gap-4">
+          <li>Comprehensive Curriculum: Our courses cover a wide range of programming languages and technologies, ensuring you have the skills needed to succeed in the tech industry.</li>
+          <li>Expert Instructors: Learn from industry professionals who bring real-world experience and insights to the classroom.</li>
+          <li>Hands-on Projects: Apply what you’ve learned through practical projects that build your portfolio and enhance your skills.</li>
+          <li>Community Support: Join a vibrant community of learners and mentors who are here to support you every step of the way.</li>
+        </ul>
+      </div>
+      <div class="w-1/2 h-full flex items-center justify-center">
+        <!-- <i class="fas fa-award text-6xl text-brand-dark-dark dark:text-brand-white"></i> -->
+        <img src="/assets/images/illustrations/1200ppi/Asset 3@1200x-8.png" alt="" class="w-full h-auto object-cover  ">
+      </div>
+    </section>
+
+    <!-- THE COURSE CARDS SECTION  -->
+     
+    
+
+    <!-- the footer section   -->
+    <footer class="w-screen h-auto py-8 flex items-center justify-center gap-10 border-t border-brand-dark-dark/30 dark:border-brand-white/30">
+      <div class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">
+        &copy; 2024 Code Draw. All rights reserved.
+      </div>
+      <ul class="flex flex-row items-center gap-6 text-sm text-brand-dark-dark/70 dark:text-brand-white/70">
+        <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Terms of Service</a></li>
+        <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Contact Us</a></li>
+      </ul>
+    </footer>
+
+    <script src="./assets/scripts/main.js"></script>
+  </body>
+</html>

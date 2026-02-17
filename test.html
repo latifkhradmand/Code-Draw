@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CODE DRAW | Tailwind CSS v4</title>
+  <link href="./src/output.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    🌙
+  </button>
+
+  <!-- Background Blobs -->
+  <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+    <div class="blob-red -top-24 -left-24"></div>
+    <div class="blob-yellow -bottom-12 -right-12"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex justify-center items-center min-h-screen p-5 gap-8 flex-wrap">
+    
+    <!-- Card 1: Primary CTA -->
+    <div class="glass-card w-full max-w-md">
+      <div class="logo mb-6">
+        <span class="logo-bracket">{</span>
+        CODE DRAW
+        <span class="logo-bracket">}</span>
+      </div>
+      
+      <h2 class="heading-brand text-2xl mb-4">Modern Design System</h2>
+      
+      <p class="text-brand-muted mb-8">
+        Built with <strong class="text-brand-yellow">#FFBE00</strong> yellow and 
+        <strong class="text-brand-dark dark:text-brand-white">#25182E</strong> purple 
+        for a premium coding experience.
+      </p>
+      
+      <a href="#" class="btn-primary">Get Started</a>
+    </div>
+
+    <!-- Card 2: Secondary Actions -->
+    <div class="glass-card w-full max-w-md">
+      <h2 class="heading-brand text-2xl mb-4 text-brand-red">Special Projects</h2>
+      
+      <p class="text-brand-muted mb-8">
+        Use <strong class="text-brand-red">#CA1F3D</strong> red for urgent actions, 
+        notifications, or special highlights in your UI.
+      </p>
+      
+      <div class="flex gap-4">
+        <a href="#" class="btn-secondary">View Project</a>
+        <button class="btn-outline">Cancel</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    
+    // Load saved theme from localStorage
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.className = savedTheme;
+    toggleBtn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+    
+    // Toggle theme on click
+    toggleBtn.addEventListener('click', () => {
+      const isDark = html.classList.contains('dark');
+      const newTheme = isDark ? 'light' : 'dark';
+      
+      html.className = newTheme;
+      localStorage.setItem('theme', newTheme);
+      toggleBtn.textContent = isDark ? '🌙' : '☀️';
+    });
+  </script>
+</body>
+</html>
