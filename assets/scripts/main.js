@@ -38,3 +38,19 @@ mobileMenuToggleBtn.addEventListener('click', () => {
   }
 });
 
+
+// the mobile sidebar toggle button
+const mobileSidebarToggleBtn = document.getElementById("sidebar-button");
+const sidebar = document.getElementById("sidebar");
+const sidebarOverlay = document.getElementById("sidebar-overlay");
+
+mobileSidebarToggleBtn.addEventListener("click", () => {
+  // sidebar.classList.toggle("translate-x-0");
+  sidebar.classList.toggle("-translate-x-52");
+  sidebar.style.transition = "all .5s ease-in-out";
+  sidebarOverlay.classList.toggle("hidden");
+  // sidebar.classList.toggle("hidden");
+  // sidebarOverlay.classList.toggle("pointer-events-none");
+});
+
+

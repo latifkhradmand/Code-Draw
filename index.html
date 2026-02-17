@@ -15,7 +15,7 @@
   <body class="bg-brand-white dark:bg-brand-dark-dark">
     <!-- NAVBAR   -->
     <nav
-      class="w-[calc(100%-20px)] h-16 px-10 flex flex-row items-center justify-between max-sm:hidden
+      class="w-[calc(100%-20px)] h-16 px-10 flex flex-row items-center justify-between max-sm:hidden max-lg:hidden
       justify-self-center fixed top-2.5 border rounded-xl border-brand-dark-dark/30 dark:border-brand-white/30 
       backdrop-blur-2xl bg-transparent shadow-2xl shadow-brand-dark-dark/20 z-[9999] transition-colors">
 
@@ -35,15 +35,16 @@
         <button type="button" class="cursor-pointer w-10 h-10 rounded-full bg-brand-dark-dark/20 dark:bg-brand-white/20 flex items-center justify-center text-xl text-brand-dark-dark dark:text-brand-white transition-colors" id="theme-toggle" aria-label="Toggle theme">
         <i class="fas fa-moon text-3xl"></i>
         </button>
-        <button class="btn-primary">Get Started <i class="fas fa-arrow-right ml-2"></i></button>
+        <button class="cursor-pointer w-52 h-12 rounded-lg bg-brand-red flex items-center justify-center text-lg text-brand-white">Login/Sign-Up <i class="fas fa-user ml-2"></i></button>
       </div>
 
     </nav>
 
     <!-- MOBILE SIDEBAR -->
-     <aside class="max-lg:w-52  lg:hidden h-screen fixed top-0 left-0 max-sm:hidden
+     <aside id="sidebar" class="max-lg:w-52 flex items-center justify-start flex-col lg:hidden h-screen fixed top-0 left-0
      border rounded-r-xl border-brand-dark-dark/30 dark:border-brand-white/30 
-      backdrop-blur-2xl bg-transparent shadow-2xl shadow-brand-dark-dark/20 z-[9999] transition-colors ">
+      backdrop-blur-2xl bg-transparent shadow-2xl shadow-brand-dark-dark/20 z-[9999] transition-colors ease transition-all duration-[3s] -translate-x-52">
+
 
       <!-- the profile section of the sidebar -->
       <div class="profile w-full h-24 py-4 flex items-center gap-3 px-3 border-b border-brand-dark-dark/30 dark:border-brand-white/30 max-sm:gap-2 max-sm:px-2 max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:h-auto">
@@ -62,43 +63,53 @@
         </button>
       </div>
 
-      <!-- the navigation section of the sidebar -->
-      <ul class="flex flex-col items-start justify-start gap-1.5 text-lg text-brand-dark-dark/70 dark:text-brand-white/70 px-1 py-6">
-        <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
-        hover:bg-brand-dark-dark/20 dark:hover:bg-brand-white/20 transition-colors w-full">
-          <i class="fas fa-home mr-2"></i><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Home</a>
-        </li>
-        <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
-        hover:bg-brand-dark-dark/20 dark:hover:bg-brand-white/20 transition-colors w-full">
-          <i class="fas fa-graduation-cap mr-2"></i><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Courses</a>
-        </li>
-        <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
-        hover:bg-brand-dark-dark/20 dark:hover:bg-brand-white/20 transition-colors w-full">
-          <i class="fas fa-project-diagram mr-2"></i><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Projects</a>
-        </li>
-        <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
-        hover:bg-brand-dark-dark/20 dark:hover:bg-brand-white/20 transition-colors w-full">
-          <i class="fas fa-info-circle mr-2"></i><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">About</a>
-        </li>
-        <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
-        hover:bg-brand-dark-dark/20 dark:hover:bg-brand-white/20 transition-colors w-full">
-          <i class="fas fa-envelope mr-2"></i><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Contact</a>
-        </li>
-      </ul>
+      <div class="w-full h-full flex items-center justify-between flex-col py-6">
+        <!-- the navigation section of the sidebar -->
+        <ul class="flex w-full flex-col items-start justify-start gap-1.5 text-lg text-brand-dark-dark/70 dark:text-brand-white/70 px-1 py-6">
+          <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
+          hover:bg-brand-dark-dark/20 dark:hover:bg-brand-white/20 transition-colors w-full">
+            <i class="fas fa-home mr-2"></i><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Home</a>
+          </li>
+          <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
+          hover:bg-brand-dark-dark/20 dark:hover:bg-brand-white/20 transition-colors w-full">
+            <i class="fas fa-graduation-cap mr-2"></i><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Courses</a>
+          </li>
+          <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
+          hover:bg-brand-dark-dark/20 dark:hover:bg-brand-white/20 transition-colors w-full">
+            <i class="fas fa-project-diagram mr-2"></i><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Projects</a>
+          </li>
+          <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
+          hover:bg-brand-dark-dark/20 dark:hover:bg-brand-white/20 transition-colors w-full">
+            <i class="fas fa-info-circle mr-2"></i><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">About</a>
+          </li>
+          <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
+          hover:bg-brand-dark-dark/20 dark:hover:bg-brand-white/20 transition-colors w-full">
+            <i class="fas fa-envelope mr-2"></i><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Contact</a>
+          </li>
+        </ul>
+
+        <!-- exit button of the sidebar -->
+        <button type="button" class="w-full h-12 bg-brand-red-dark/20 dark:bg-brand-red/20 text-lg text-brand-white rounded-lg hover:bg-brand-red-dark/30 dark:hover:bg-brand-red/30 transition-colors">Logout <i class="fas fa-sign-out-alt ml-2"></i></button>
+      </div>
 
       <!-- the exit button of the sidebar -->
        <button type="button" class="w-full"></button>
      </aside>
 
+    <!-- OVERLAY -->
+    <div id="sidebar-overlay" class="w-full h-full fixed hidden top-0 left-0 bg-white/50 dark:bg-black/50 backdrop-blur-sm pointer-events-none transition-opacity z-[9989]"></div>
+
+
 
     <!-- MOBILE BOTTON NAVBAR -->
-      <nav class="w-screen h-16 fixed bottom-0 left-0 border-t border-brand-dark-dark/30 dark:border-brand-white/30 backdrop-blur-2xl bg-transparent shadow-2xl shadow-brand-dark-dark/20 z-[9999] transition-colors">
-        <ul class="w-full h-full flex items-center justify-around text-lg text-brand-dark-dark/70 dark:text-brand-white/70">
-          <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors"><i class="fas fa-home"></i></a></li>
-          <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors"><i class="fas fa-graduation-cap"></i></a></li>
-          <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors"><i class="fas fa-project-diagram"></i></a></li>
-          <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors"><i class="fas fa-info-circle"></i></a></li>
-          <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors"><i class="fas fa-envelope"></i></a></li>
+      <nav class="w-screen h-16 fixed bottom-0 left-0 border-t border-brand-dark-dark/30 dark:border-brand-white/30 backdrop-blur-2xl bg-transparent shadow-2xl shadow-brand-dark-dark/20 z-[9990] transition-colors lg:hidden">
+        <ul class="w-full h-full flex items-center justify-evenly text-lg text-brand-dark-dark/70 dark:text-brand-white/70">
+          <li class="max-sm:w-14 max-sm:h-14 flex items-center justify-center max-lg:h-14 max-lg:w-24 bg-brand-dark-dark/20 dark:bg-brand-white/20 rounded-3xl"><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors"><i class="fas fa-home"></i></a></li>
+          <li class="max-sm:w-14 max-sm:h-14 flex items-center justify-center max-lg:h-14 max-lg:w-24 bg-brand-dark-dark/20 dark:bg-brand-white/20 rounded-3xl"><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors"><i class="fas fa-graduation-cap"></i></a></li>
+          <li class="max-sm:w-14 max-sm:h-14 flex items-center justify-center max-lg:h-14 max-lg:w-24 bg-brand-dark-dark/20 dark:bg-brand-white/20 rounded-3xl"><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors"><i class="fas fa-project-diagram"></i></a></li>
+          <li class="max-sm:w-14 max-sm:h-14 flex items-center justify-center max-lg:h-14 max-lg:w-24 bg-brand-dark-dark/20 dark:bg-brand-white/20 rounded-3xl"><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors"><i class="fas fa-info-circle"></i></a></li>
+          <li class="max-sm:w-14 max-sm:h-14 flex items-center justify-center max-lg:h-14 max-lg:w-24 bg-brand-dark-dark/20 dark:bg-brand-white/20 rounded-3xl"><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors"><i class="fas fa-envelope"></i></a></li>
+          <li id="sidebar-button" class="max-sm:w-14 max-sm:h-14 flex items-center justify-center max-lg:h-14 max-lg:w-24 bg-brand-red-dark/20 dark:bg-brand-red/20 rounded-2xl"><button class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors" type="button"><i class="fas fa-bars"></i></button></li>
         </ul>
         
       </nav>
@@ -166,7 +177,7 @@
     </section>
 
     <!-- the supporting brands  -->
-    <section class="w-screen h-auto py-8 flex items-center justify-center gap-16 border-t border-b mb-6 border-brand-dark-dark/30 dark:border-brand-white/30">
+    <section class="w-screen max-sm:w-full h-auto py-8 flex items-center justify-center gap-16 max-sm:flex-wrap max-sm:justify-center max-sm:gap-8 border-t border-b mb-6 border-brand-dark-dark/30 dark:border-brand-white/30">
       <i class="fab fa-google text-3xl text-brand-dark-dark dark:text-brand-white"></i>
       <i class="fab fa-microsoft text-3xl text-brand-dark-dark dark:text-brand-white"></i>
       <i class="fab fa-apple text-3xl text-brand-dark-dark dark:text-brand-white"></i>
