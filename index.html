@@ -35,35 +35,49 @@
         <button type="button" class="cursor-pointer w-10 h-10 rounded-full bg-brand-dark-dark/20 dark:bg-brand-white/20 flex items-center justify-center text-xl text-brand-dark-dark dark:text-brand-white transition-colors" id="theme-toggle" aria-label="Toggle theme">
         <i class="fas fa-moon text-3xl"></i>
         </button>
-        <a href="./pages/SignIn-SignUp.html" class="cursor-pointer w-52 h-12 rounded-lg bg-brand-red flex items-center justify-center text-lg text-brand-white">Login/Sign-Up <i class="fas fa-user ml-2"></i></a>
+        <a href="./pages/SignIn-SignUp.html" id="navbar-login-btn" class="cursor-pointer w-52 h-12 rounded-lg bg-brand-red flex items-center justify-center text-lg text-brand-white">Login/Sign-Up <i class="fas fa-user ml-2"></i></a>
+        <a href="" id="navbar-user-btn" class="hidden cursor-pointer w-12 h-12 rounded-full bg-brand-red flex items-center justify-center text-lg text-brand-white"><i class="fas fa-user text-2xl"></i></a>
       </div>
 
     </nav>
 
     <!-- MOBILE SIDEBAR -->
-     <aside id="sidebar" class="max-lg:w-52 flex items-center justify-start flex-col lg:hidden h-screen fixed top-0 left-0
+     <aside id="sidebar" class="max-lg:w-52 flex items-center justify-start flex-col lg:hidden h-[calc(100vh-4rem)] fixed top-0 left-0
      border rounded-r-xl border-brand-dark-dark/30 dark:border-brand-white/30 
       backdrop-blur-2xl bg-transparent shadow-2xl shadow-brand-dark-dark/20 z-[9999] transition-colors ease transition-all duration-[3s] -translate-x-52">
 
 
       <!-- the profile section of the sidebar -->
-      <div class="profile w-full h-24 py-4 flex items-center gap-3 px-3 border-b border-brand-dark-dark/30 dark:border-brand-white/30 max-sm:gap-2 max-sm:px-2 max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:h-auto">
+      <div class="hidden profile w-full h-24 py-4 flex items-center gap-3 px-3 border-b border-brand-dark-dark/30 dark:border-brand-white/30 max-sm:gap-2 max-sm:px-2 max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:h-auto">
+        <a href="#">
         <img src="assets/images/profiles/05.jfif" class="w-14 h-14 rounded-full border border-brand-red" alt="" srcset="">
+        </a>
         <div class="flex flex-col items-start justify-center gap-1">
           <h3 class="text-sm text-brand-dark-dark dark:text-brand-white font-semibold">Latif Khradmand</h3>
           <span class="text-xs text-brand-dark-dark/70 dark:text-brand-white/70">Student</span>
         </div>
       </div>
+      
+      <!-- the logo  -->
+      <div class="profile w-full h-24 py-4 flex items-center gap-3 px-3 border-b border-brand-dark-dark/30 dark:border-brand-white/30 max-sm:gap-2 max-sm:px-2 max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:h-auto sm:justify-center">
+        <img src="assets/images/logo/03.png" class="w-16 h-16" alt="" srcset="">
+        <div class="logo text-2xl font-bold text-brand-dark-dark dark:text-brand-white sm:hidden">
+          <span class="logo-bracket">{</span>
+          CODE DRAW
+          <span class="logo-bracket">}</span>
+        </div>
+      </div>
+
 
       <!-- the dark mode toggle of the sidebar -->
       <div class="w-full h-16 flex items-center justify-between gap-4 px-3 border-b border-brand-dark-dark/30 dark:border-brand-white/30 max-sm:justify-center">
         <a href="#" class="max-sm:hidden cursor-pointer w-auto px-2.5 h-10 rounded-lg bg-brand-dark-dark/20 dark:bg-brand-white/20 flex items-center justify-center text-xl text-brand-dark-dark dark:text-brand-white transition-colors top-4 right-4">Dashboard</a> 
-        <button type="button" class="cursor-pointer w-10 h-10 rounded-full bg-brand-dark-dark/20 dark:bg-brand-white/20 flex items-center justify-center text-xl text-brand-dark-dark dark:text-brand-white transition-colors top-4 right-4" id="mobile-theme-toggle" aria-label="Toggle theme">
+        <button type="button" class="cursor-pointer max-sm:w-full w-10 h-10 my-5 rounded-full bg-brand-dark-dark/20 dark:bg-brand-white/20 flex items-center justify-center text-xl text-brand-dark-dark dark:text-brand-white transition-colors" id="mobile-theme-toggle" aria-label="Toggle theme">
           <i class="fas fa-moon text-3xl"></i>
         </button>
       </div>
 
-      <div class="w-full h-full flex items-center justify-between flex-col py-6">
+      <div class="w-full h-full flex items-center justify-between flex-col py-6 px-10 max-sm:px-2">
         <!-- the navigation section of the sidebar -->
         <ul class="sidebar-links flex w-full flex-col items-start justify-start gap-1.5 text-lg text-brand-dark-dark/70 dark:text-brand-white/70 px-1 py-6">
           <li class="w-full px-4 py-2 rounded-sm border-b border-brand-dark-dark/30 dark:border-brand-white/30
@@ -89,11 +103,9 @@
         </ul>
 
         <!-- exit button of the sidebar -->
-        <button type="button" class="w-full h-12 bg-brand-red-dark/20 dark:bg-brand-red/20 text-lg text-brand-white rounded-lg hover:bg-brand-red-dark/30 dark:hover:bg-brand-red/30 transition-colors">Logout <i class="fas fa-sign-out-alt ml-2"></i></button>
+        <button id="sidebar-logout-btn" type="button" class="w-full h-12 bg-brand-red-dark/20 dark:bg-brand-red/20 text-lg text-brand-white rounded-lg hover:bg-brand-red-dark/30 dark:hover:bg-brand-red/30 transition-colors">Logout <i class="fas fa-sign-out-alt ml-2"></i></button>
+        <a href="./pages/SignIn-SignUp.html" id="sidebar-login-btn" class="flex hidden items-center justify-center w-full h-12 bg-brand-red-dark/20 dark:bg-brand-red/20 text-lg text-brand-white rounded-lg hover:bg-brand-red-dark/30 dark:hover:bg-brand-red/30 transition-colors">Login <i class="fas fa-sign-in-alt ml-2"></i></a>
       </div>
-
-      <!-- the exit button of the sidebar -->
-       <button type="button" class="w-full"></button>
      </aside>
 
     <!-- OVERLAY -->

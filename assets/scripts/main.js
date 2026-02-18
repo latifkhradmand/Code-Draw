@@ -30,6 +30,8 @@ function applyTheme() {
   }
 }
 htmlElement.classList.toggle('dark', JSON.parse(localStorage.getItem('theme')) === "dark");
+htmlElement.classList.contains('dark') ? themeToggleIcon.classList.replace('fa-moon', 'fa-sun') : themeToggleIcon.classList.replace('fa-sun', 'fa-moon');
+htmlElement.classList.contains('dark') ? MobilethemeToggleIcon.classList.replace('fa-moon', 'fa-sun') : MobilethemeToggleIcon.classList.replace('fa-sun', 'fa-moon');
 
 themeToggleBtn.addEventListener('click', () => {
   applyTheme();
