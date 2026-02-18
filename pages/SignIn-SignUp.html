@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- EXTERNAL LINKS  -->
+    <!-- FontAwesome 6.5.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- INTERNAL LINKS -->
+    <link rel="stylesheet" href="../src/output.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-brand-white dark:bg-brand-dark-dark h-screen w-screen flex items-center justify-center">
+
+
+    <!-- LOGIN AND SIGNUP Section -->
+     <div class="w-xl max-sm:w-full max-sm:mx-1.5 flex flex-col items-center justify-evenly px-4 py-4 mx-auto gap-1 border border-brand-dark-dark/20 rounded-[42px] bg-brand-white/20 backdrop-blur-2xl dark:bg-brand-dark-dark/20 dark:border-brand-dark-dark/20">
+      <div class="w-full h-auto px-5 py-5 flex flex-col gap-4 bg-brand-red-dark/20 rounded-4xl items-center justify-between backdrop-blur-2xl border border-brand-red-dark/20">
+        <img src="../assets/images/logo/03.png" class="w-20 h-20" alt="" srcset="">
+        <div class="w-full h-14 p-2 flex gap-1 items-center justify-evenly dark:bg-brand-dark-dark/50 rounded-2xl bg-brand-white/50 backdrop-blur-2xl border dark:border-brand-dark-dark/50 border-brand-white">
+          <button  id="login-boble-btn" class="btn-secondary p-0 w-1/2 h-full rounded-xl cursor-pointer " type="button">Login</button>
+          <button  id="sign-up-boble-btn" class="p-0 w-1/2 h-full rounded-xl cursor-pointer " type="button">Sign Up</button>
+        </div>
+      </div>
+
+      <!-- the bobles -->
+      <div class="overflow-hidden w-full h-auto relative flex flex-row items-start justify-between gap-8">
+
+        <!-- the login boble -->
+        <div id="login-boble" class=" w-full h-auto px-5 py-5 flex flex-col gap-4 items-center justify-between">
+          <h2 class="text-2xl font-bold text-brand-dark-dark dark:text-brand-white">Welcome Back</h2>
+          <form action="" class="w-full flex flex-col gap-4 justify-evenly items-center">
+            <input class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="email" name="email" id="email" placeholder="Email Address">
+            <input class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="password" name="password" id="password" placeholder="Password">
+            <a href="#">Forget Password?</a>
+          </form>
+          <button class="btn-primary w-full" type="submit">Login</button>
+          <p class="text-sm text-brand-dark-dark dark:text-brand-white/70">Don't have an account? <a href="#" class="text-brand-red dark:text-brand-red/75">Sign Up</a></p>
+        </div>
+
+        <!-- the sign up boble -->
+        <div id="sign-up-boble" class="absolute w-full h-auto px-5 py-5 flex flex-col gap-4 items-center justify-between -translate-x-full">
+          <h2 class="text-2xl font-bold text-brand-dark-dark dark:text-brand-white">Start A Journey</h2>
+          <form action="" class="w-full flex flex-col gap-4 justify-evenly items-center">
+            <input class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="text" name="name" id="name" placeholder="Full Name">
+            <input class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="email" name="email" id="email" placeholder="Email Address">
+            <input class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="password" name="password" id="password" placeholder="Password">
+            <input class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
+          </form>
+          <button class="btn-primary w-full" type="submit">Register</button>
+          <p class="text-sm text-brand-dark-dark dark:text-brand-white/70">Already have an account? <a href="#" class="text-brand-red dark:text-brand-red/75">Login</a></p>
+        </div>
+      </div>
+      <p class="text-sm text-center text-brand-dark-dark dark:text-brand-white/70">By signing up, you agree to our <a href="#" class="text-brand-red dark:text-brand-red/75">Terms of Service</a> and <a href="#" class="text-brand-red dark:text-brand-red/75">Privacy Policy</a>.</p>
+     </div>
+
+    
+    
+
+    <script src="../assets/scripts/student-logs.js"></script>
+  </body>
+</html>

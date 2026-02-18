@@ -2,40 +2,42 @@
 const themeToggleBtn = document.getElementById('theme-toggle');
 let themeToggleIcon = themeToggleBtn.querySelector('i'); // Assuming the icon is an <i> element with class 'fas'
 const htmlElement = document.documentElement; 
-
-themeToggleBtn.addEventListener('click', () => {
-  htmlElement.classList.toggle('dark');
-  if (htmlElement.classList.contains('dark')) {
-    themeToggleIcon.classList.remove('fa-moon');
-    themeToggleIcon.classList.add('fa-sun'); // Change to sun icon for dark mode
-    MobilethemeToggleIcon.classList.remove("fa-moon");
-    MobilethemeToggleIcon.classList.add("fa-sun");
-  } else {
-    themeToggleIcon.classList.remove('fa-sun');
-    themeToggleIcon.classList.add('fa-moon'); // Change back to moon icon for light mode
-    MobilethemeToggleIcon.classList.remove("fa-sun");
-    MobilethemeToggleIcon.classList.add("fa-moon");
-  }
-});
-
-
-// the mobile menu toggle button
 const mobileMenuToggleBtn = document.getElementById('mobile-theme-toggle');
 const MobilethemeToggleIcon = mobileMenuToggleBtn.querySelector('i');
 
-mobileMenuToggleBtn.addEventListener('click', () => {
-  htmlElement.classList.toggle("dark");
-  if (htmlElement.classList.contains("dark")) {
-    themeToggleIcon.classList.remove("fa-moon");
-    themeToggleIcon.classList.add("fa-sun"); // Change to sun icon for dark mode
-    MobilethemeToggleIcon.classList.remove("fa-moon");
-    MobilethemeToggleIcon.classList.add("fa-sun"); // Change to sun icon for dark mode
-  } else {
-    MobilethemeToggleIcon.classList.remove("fa-sun");
-    MobilethemeToggleIcon.classList.add("fa-moon"); // Change back to moon icon for light mode
-    themeToggleIcon.classList.remove("fa-sun");
-    themeToggleIcon.classList.add("fa-moon"); // Change back to moon icon for light mode
+
+
+function applyTheme() {
+  // localStorage.setItem('theme', JSON.stringify(htmlElement.classList.contains('dark') ? "light" : "dark"));
+  if (localStorage.getItem('theme')) {
+    if (JSON.parse(localStorage.getItem('theme')) === "light") {
+      htmlElement.classList.add('dark');
+      themeToggleIcon.classList.remove('fa-moon');
+      themeToggleIcon.classList.add('fa-sun');
+      MobilethemeToggleIcon.classList.remove("fa-moon");
+      MobilethemeToggleIcon.classList.add("fa-sun");
+      localStorage.setItem('theme', JSON.stringify("dark"));
+    } else {
+      htmlElement.classList.remove('dark');
+      themeToggleIcon.classList.remove('fa-sun');
+      themeToggleIcon.classList.add('fa-moon');
+      MobilethemeToggleIcon.classList.remove("fa-sun");
+      MobilethemeToggleIcon.classList.add("fa-moon");
+      localStorage.setItem('theme', JSON.stringify("light"));
+    }
+  }else {
+    localStorage.setItem('theme', JSON.stringify("dark"));
   }
+}
+htmlElement.classList.toggle('dark', JSON.parse(localStorage.getItem('theme')) === "dark");
+
+themeToggleBtn.addEventListener('click', () => {
+  applyTheme();
+});
+
+// the mobile menu toggle button
+mobileMenuToggleBtn.addEventListener('click', () => {
+    applyTheme();
 });
 
 
@@ -59,6 +61,10 @@ sidebarLinks.forEach((link) => {
   });
 });
 
-
-
+document.addEventListener("click", (e) => {
+  if (!sidebar.contains(e.target) && !mobileSidebarToggleBtn.contains(e.target)) {
+    sidebar.classList.add("-translate-x-52");
+    sidebarOverlay.classList.add("hidden");
+  }
+});
 
