@@ -35,8 +35,8 @@
         <div id="login-boble" class=" w-full h-auto px-5 py-5 flex flex-col gap-4 items-center justify-between">
           <h2 class="text-2xl font-bold text-brand-dark-dark dark:text-brand-white">Welcome Back</h2>
           <form action="" class="w-full flex flex-col gap-4 justify-evenly items-center">
-            <input class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="email" name="email" id="email" placeholder="Email Address">
-            <input class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="password" name="password" id="password" placeholder="Password">
+            <input required id="login-email" class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="email" name="email" id="email" placeholder="Email Address">
+            <input required id="login-password" class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="password" name="password" id="password" placeholder="Password">
             <a href="#">Forget Password?</a>
           </form>
           <button class="btn-primary w-full" type="submit">Login</button>
@@ -47,10 +47,10 @@
         <div id="sign-up-boble" class="absolute w-full h-auto px-5 py-5 flex flex-col gap-4 items-center justify-between -translate-x-full">
           <h2 class="text-2xl font-bold text-brand-dark-dark dark:text-brand-white">Start A Journey</h2>
           <form action="" class="w-full flex flex-col gap-4 justify-evenly items-center">
-            <input class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="text" name="name" id="name" placeholder="Full Name">
-            <input class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="email" name="email" id="email" placeholder="Email Address">
-            <input class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="password" name="password" id="password" placeholder="Password">
-            <input class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
+            <input required id="full-name" class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="text" name="name" id="name" placeholder="Full Name">
+            <input required id="email" class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="email" name="email" id="email" placeholder="Email Address">
+            <input required id="password" class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="password" name="password" id="password" placeholder="Password">
+            <input required id="password-confirm" class="w-full h-12 rounded-xl  bg-brand-white/30 border border-brand-yellow/50 dark:border-0 dark:placeholder:text-stone-400 shadow-2xl shadow-brand-yellow/20 placeholder:text-brand-dark-dark dark:bg-brand-dark-dark/50 px-4" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password">
           </form>
           <button class="btn-primary w-full" type="submit">Register</button>
           <p class="text-sm text-brand-dark-dark dark:text-brand-white/70">Already have an account? <a href="#" class="text-brand-red dark:text-brand-red/75">Login</a></p>

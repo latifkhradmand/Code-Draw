@@ -1,4 +1,4 @@
-// import "";
+
 
 const htmlElement = document.documentElement;
 htmlElement.classList.toggle("dark", JSON.parse(localStorage.getItem("theme")) === "dark",);
@@ -29,6 +29,3 @@ signUpBobleBtn.addEventListener("click", () => {
   signUpBobleBtn.classList.add("btn-secondary");
   loginBobleBtn.classList.remove("btn-secondary");
 });
-
-
-
