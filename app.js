@@ -1,13 +1,8 @@
-var userName = "Alli"
-var userId = "1233st";
+
+var x = 1;
 
 
-if(userName == "Ali"){
-  if(userId == "1233st"){
-    console.log("Weldome " + userName)
-  }else{
-    console.log("Sorry Your id is wrong")
-  }
-}else{
-  console.log("Your Username is wrong!")
+while(x <= 10){
+  document.write("the x is: " + x + "<br>")
+  x++;
 }

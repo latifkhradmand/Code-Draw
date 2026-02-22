@@ -17,6 +17,7 @@ function applyTheme() {
       MobilethemeToggleIcon.classList.remove("fa-moon");
       MobilethemeToggleIcon.classList.add("fa-sun");
       localStorage.setItem('theme', JSON.stringify("dark"));
+
     } else {
       htmlElement.classList.remove('dark');
       themeToggleIcon.classList.remove('fa-sun');

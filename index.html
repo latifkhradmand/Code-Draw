@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- EXTERNAL LINKS  -->
+     <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <!-- FontAwesome 6.5.1 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -38,7 +39,7 @@
         <i class="fas fa-moon text-3xl"></i>
         </button>
         <a href="./pages/SignIn-SignUp.html" id="navbar-login-btn" class="cursor-pointer w-52 h-12 rounded-lg bg-brand-red flex items-center justify-center text-lg text-brand-white">Login/Sign-Up <i class="fas fa-user ml-2"></i></a>
-        <a href="" id="navbar-user-btn" class="hidden cursor-pointer w-12 h-12 rounded-full bg-brand-red flex items-center justify-center text-lg text-brand-white"><i class="fas fa-user text-2xl"></i></a>
+        <a href="pages/dashboard.html" id="navbar-user-btn" class=" cursor-pointer w-12 h-12 rounded-full bg-brand-red flex items-center justify-center text-lg text-brand-white"><i class="fas fa-user text-2xl"></i></a>
       </div>
 
     </nav>
@@ -50,7 +51,7 @@
 
 
       <!-- the profile section of the sidebar -->
-      <div class="hidden profile w-full h-24 py-4 flex items-center gap-3 px-3 border-b border-brand-dark-dark/30 dark:border-brand-white/30 max-sm:gap-2 max-sm:px-2 max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:h-auto">
+      <div class=" profile w-full h-24 py-4 flex items-center gap-3 px-3 border-b border-brand-dark-dark/30 dark:border-brand-white/30 max-sm:gap-2 max-sm:px-2 max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:h-auto">
         <a href="#">
         <img src="assets/images/profiles/05.jfif" class="w-14 h-14 rounded-full border border-brand-red" alt="" srcset="">
         </a>
@@ -61,7 +62,7 @@
       </div>
       
       <!-- the logo  -->
-      <div class="profile w-full h-24 py-4 flex items-center gap-3 px-3 border-b border-brand-dark-dark/30 dark:border-brand-white/30 max-sm:gap-2 max-sm:px-2 max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:h-auto sm:justify-center">
+      <div class="hidden profile w-full h-24 py-4 flex items-center gap-3 px-3 border-b border-brand-dark-dark/30 dark:border-brand-white/30 max-sm:gap-2 max-sm:px-2 max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:h-auto sm:justify-center">
         <img src="assets/images/logo/03.png" class="w-16 h-16" alt="" srcset="">
         <div class="logo text-2xl font-bold text-brand-dark-dark dark:text-brand-white sm:hidden">
           <span class="logo-bracket">{</span>
@@ -73,7 +74,7 @@
 
       <!-- the dark mode toggle of the sidebar -->
       <div class="w-full h-16 flex items-center justify-between gap-4 px-3 border-b border-brand-dark-dark/30 dark:border-brand-white/30 max-sm:justify-center">
-        <a href="#" class="max-sm:hidden cursor-pointer w-auto px-2.5 h-10 rounded-lg dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-xl bg-brand-red-dark/10 flex items-center justify-center text-xl text-brand-dark-dark dark:text-brand-white transition-colors top-4 right-4">Dashboard</a> 
+        <a href="pages/dashboard.html" class="max-sm:hidden cursor-pointer w-auto px-2.5 h-10 rounded-lg dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-xl bg-brand-red-dark/10 flex items-center justify-center text-xl text-brand-dark-dark dark:text-brand-white transition-colors top-4 right-4">Dashboard</a> 
         <button type="button" class="cursor-pointer max-sm:w-full w-10 h-10 my-5 rounded-full dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-xl bg-brand-red-dark/10 flex items-center justify-center text-xl text-brand-dark-dark dark:text-brand-white transition-colors" id="mobile-theme-toggle" aria-label="Toggle theme">
           <i class="fas fa-moon text-3xl"></i>
         </button>
@@ -188,7 +189,7 @@
     </section>
 
     <!-- the supporting brands  -->
-    <section class="w-screen max-sm:w-full h-auto py-8 flex items-center justify-center gap-16 max-sm:flex-wrap max-sm:justify-center max-sm:gap-8 border-t border-b mb-6 border-brand-dark-dark/30 dark:border-brand-white/30">
+    <section class="w-screen max-sm:w-full h-auto py-8 flex items-center justify-center gap-16 max-sm:flex-wrap max-sm:justify-center max-sm:gap-8 mb-6 bg-brand-dark-dark/10 dark:bg-brand-white/10">
       <i class="fab fa-google text-3xl text-brand-dark-dark dark:text-brand-white"></i>
       <i class="fab fa-microsoft text-3xl text-brand-dark-dark dark:text-brand-white"></i>
       <i class="fab fa-apple text-3xl text-brand-dark-dark dark:text-brand-white"></i>
@@ -197,47 +198,133 @@
       <i class="fab fa-github text-3xl text-brand-dark-dark dark:text-brand-white"></i>
     </section>
 
-    <!-- THE COURSE CARDS SECTION  -->
-    <!-- <section class="w-screen max-sm:w-full h-auto py-8 flex flex-wrap items-center justify-center gap-16 max-sm:flex-wrap max-sm:justify-center max-sm:gap-8">
-      <div class="flex flex-col items-center justify-center glass-card w-1/5 h-auto gap-4">
-        <i class="fas fa-code text-3xl text-brand-dark-dark dark:text-brand-white"></i>
-        <h3 class="text-xl text-brand-dark-dark dark:text-brand-white">Web Development</h3>
+    <!-- THE COURSES CATEGORIES  -->
+    <section class="w-screen lg:px-20 max-sm:w-full h-auto py-8 flex flex-wrap items-center justify-center gap-16 max-sm:flex-wrap max-sm:justify-center max-sm:gap-8">
+      <div class="w-full h-auto flex flex-col items-center justify-center gap-4">
+        <h2 class="text-3xl font-semibold text-brand-red-dark dark:text-brand-red">What you will learn about</h2>
+        <p class="text-lg text-brand-dark-dark/70 dark:text-brand-white/70 px-20 text-center">Take a look at Code Draw’s course categories and start from whichever one interests you the most.</p>
       </div>
-      <div class=" flex flex-col items-center justify-center glass-card w-1/5 h-auto gap-4">
-        <i class="fas fa-laptop-code text-3xl text-brand-dark-dark dark:text-brand-white"></i>
-        <h3 class="text-xl text-brand-dark-dark dark:text-brand-white">Programming Languages</h3>
+
+      <!-- the categories cards -->
+      <div class="w-full h-auto flex flex-wrap items-center justify-center gap-8 max-sm:flex-wrap max-sm:justify-center">
+        <div class="w-52 h-52 flex flex-col items-center justify-between gap-4 p-6 cursor-pointer rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 backdrop-blur-2xl shadow-lg shadow-brand-dark-dark/20 hover:shadow-brand-red-dark/20 transition-colors duration-300 ">
+          <i class="fab fa-python text-3xl text-brand-dark-dark dark:text-brand-white transition-colors"></i>
+          <h3 class="w-full text-lg text-brand-dark-dark dark:text-brand-white font-semibold text-center">Programming Languages</h3>
+          <div class="w-full flex flex-row justify-between items-center gap-2">
+            <span class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">100+ Courses</span>
+            <i class="fas fa-arrow-right py-1 px-2 rounded-full dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-xl bg-brand-red-dark/10 flex items-center justify-center text-xl"></i>
+          </div>
+        </div>
+        <div class="w-52 h-52 flex flex-col items-center justify-between gap-4 p-6 cursor-pointer rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 backdrop-blur-2xl shadow-lg shadow-brand-dark-dark/20 hover:shadow-brand-red-dark/20 transition-colors duration-300 ">
+          <i class="fab fa-html5 text-3xl text-brand-dark-dark dark:text-brand-white transition-colors"></i>
+          <h3 class="w-full text-lg text-brand-dark-dark dark:text-brand-white font-semibold text-center">Web Development</h3>
+          <div class="w-full flex flex-row justify-between items-center gap-2">
+            <span class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">100+ Courses</span>
+            <i class="fas fa-arrow-right py-1 px-2 rounded-full dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-xl bg-brand-red-dark/10 flex items-center justify-center text-xl"></i>
+          </div>
+        </div>
+        <div class="w-52 h-52 flex flex-col items-center justify-between gap-4 p-6 cursor-pointer rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 backdrop-blur-2xl shadow-lg shadow-brand-dark-dark/20 hover:shadow-brand-red-dark/20 transition-colors duration-300 ">
+          <i class="fas fa-chart-line text-3xl text-brand-dark-dark dark:text-brand-white transition-colors"></i>
+          <h3 class="w-full text-lg text-brand-dark-dark dark:text-brand-white font-semibold text-center">Data Science</h3>
+          <div class="w-full flex flex-row justify-between items-center gap-2">
+            <span class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">100+ Courses</span>
+            <i class="fas fa-arrow-right py-1 px-2 rounded-full dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-xl bg-brand-red-dark/10 flex items-center justify-center text-xl"></i>
+          </div>
+        </div>
+        <div class="w-52 h-52 flex flex-col items-center justify-between gap-4 p-6 cursor-pointer rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 backdrop-blur-2xl shadow-lg shadow-brand-dark-dark/20 hover:shadow-brand-red-dark/20 transition-colors duration-300 ">
+          <i class="fas fa-server text-3xl text-brand-dark-dark dark:text-brand-white transition-colors"></i>
+          <h3 class="w-full text-lg text-brand-dark-dark dark:text-brand-white font-semibold text-center">Data Center</h3>
+          <div class="w-full flex flex-row justify-between items-center gap-2">
+            <span class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">100+ Courses</span>
+            <i class="fas fa-arrow-right py-1 px-2 rounded-full dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-xl bg-brand-red-dark/10 flex items-center justify-center text-xl"></i>
+          </div>
+        </div>
+        <div class="w-52 h-52 flex flex-col items-center justify-between gap-4 p-6 cursor-pointer rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 backdrop-blur-2xl shadow-lg shadow-brand-dark-dark/20 hover:shadow-brand-red-dark/20 transition-colors duration-300 ">
+          <i class="fas fa-mobile text-3xl text-brand-dark-dark dark:text-brand-white transition-colors"></i>
+          <h3 class="w-full text-lg text-brand-dark-dark dark:text-brand-white font-semibold text-center">Mobile Development</h3>
+          <div class="w-full flex flex-row justify-between items-center gap-2">
+            <span class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">50+ Courses</span>
+            <i class="fas fa-arrow-right py-1 px-2 rounded-full dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-xl bg-brand-red-dark/10 flex items-center justify-center text-xl"></i>
+          </div>
+        </div>
+        <div class="w-52 h-52 flex flex-col items-center justify-between gap-4 p-6 cursor-pointer rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 backdrop-blur-2xl shadow-lg shadow-brand-dark-dark/20 hover:shadow-brand-red-dark/20 transition-colors duration-300 ">
+          <i class="fas fa-shield-alt text-3xl text-brand-dark-dark dark:text-brand-white transition-colors"></i>
+          <h3 class="w-full text-lg text-brand-dark-dark dark:text-brand-white font-semibold text-center">Security</h3>
+          <div class="w-full flex flex-row justify-between items-center gap-2">
+            <span class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">50+ Courses</span>
+            <i class="fas fa-arrow-right py-1 px-2 rounded-full dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-xl bg-brand-red-dark/10 flex items-center justify-center text-xl"></i>
+          </div>
+        </div>
+        <div class="w-52 h-52 flex flex-col items-center justify-between gap-4 p-6 cursor-pointer rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 backdrop-blur-2xl shadow-lg shadow-brand-dark-dark/20 hover:shadow-brand-red-dark/20 transition-colors duration-300 ">
+          <i class="fas fa-gamepad text-3xl text-brand-dark-dark dark:text-brand-white transition-colors"></i>
+          <h3 class="w-full text-lg text-brand-dark-dark dark:text-brand-white font-semibold text-center">Game Development</h3>
+          <div class="w-full flex flex-row justify-between items-center gap-2">
+            <span class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">50+ Courses</span>
+            <i class="fas fa-arrow-right py-1 px-2 rounded-full dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-xl bg-brand-red-dark/10 flex items-center justify-center text-xl"></i>
+          </div>
+        </div>
+        <div class="w-52 h-52 flex flex-col items-center justify-between gap-4 p-6 cursor-pointer rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 backdrop-blur-2xl shadow-lg shadow-brand-dark-dark/20 hover:shadow-brand-red-dark/20 transition-colors duration-300 ">
+          <i class="fas fa-robot text-3xl text-brand-dark-dark dark:text-brand-white transition-colors"></i>
+          <h3 class="w-full text-lg text-brand-dark-dark dark:text-brand-white font-semibold text-center">AI (Artificial Intelligence)</h3>
+          <div class="w-full flex flex-row justify-between items-center gap-2">
+            <span class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">50+ Courses</span>
+            <i class="fas fa-arrow-right py-1 px-2 rounded-full dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-xl bg-brand-red-dark/10 flex items-center justify-center text-xl"></i>
+          </div>
+        </div>
+        <div class="w-52 h-52 flex flex-col items-center justify-between gap-4 p-6 cursor-pointer rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 backdrop-blur-2xl shadow-lg shadow-brand-dark-dark/20 hover:shadow-brand-red-dark/20 transition-colors duration-300 ">
+          <i class="fas fa-palette text-3xl text-brand-dark-dark dark:text-brand-white transition-colors"></i>
+          <h3 class="w-full text-lg text-brand-dark-dark dark:text-brand-white font-semibold text-center">UI/UX Design</h3>
+          <div class="w-full flex flex-row justify-between items-center gap-2">
+            <span class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">50+ Courses</span>
+            <i class="fas fa-arrow-right py-1 px-2 rounded-full dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-xl bg-brand-red-dark/10 flex items-center justify-center text-xl"></i>
+          </div>
+        </div>
+        <div class="w-52 h-52 flex flex-col items-center justify-between gap-4 p-6 cursor-pointer rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30 backdrop-blur-2xl shadow-lg shadow-brand-dark-dark/20 hover:shadow-brand-red-dark/20 transition-colors duration-300 ">
+          <i class="fas fa-lock text-3xl text-brand-dark-dark dark:text-brand-white transition-colors"></i>
+          <h3 class="w-full text-lg text-brand-dark-dark dark:text-brand-white font-semibold text-center">Cyber Security</h3>
+          <div class="w-full flex flex-row justify-between items-center gap-2">
+            <span class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">50+ Courses</span>
+            <i class="fas fa-arrow-right py-1 px-2 rounded-full dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-xl bg-brand-red-dark/10 flex items-center justify-center text-xl"></i>
+          </div>
+        </div>
+        
       </div>
-      <div class=" flex flex-col items-center justify-center glass-card w-1/5 h-auto gap-4">
-        <i class="fas fa-laptop-code text-3xl text-brand-dark-dark dark:text-brand-white"></i>
-        <h3 class="text-xl text-brand-dark-dark dark:text-brand-white">Programming Languages</h3>
-      </div>
-      <div class=" flex flex-col items-center justify-center glass-card w-1/5 h-auto gap-4">
-        <i class="fas fa-laptop-code text-3xl text-brand-dark-dark dark:text-brand-white"></i>
-        <h3 class="text-xl text-brand-dark-dark dark:text-brand-white">Programming Languages</h3>
-      </div>
-      <div class=" flex flex-col items-center justify-center glass-card w-1/5 h-auto gap-4">
-        <i class="fas fa-laptop-code text-3xl text-brand-dark-dark dark:text-brand-white"></i>
-        <h3 class="text-xl text-brand-dark-dark dark:text-brand-white">Programming Languages</h3>
-      </div>
-      <div class=" flex flex-col items-center justify-center glass-card w-1/5 h-auto gap-4">
-        <i class="fas fa-laptop-code text-3xl text-brand-dark-dark dark:text-brand-white"></i>
-        <h3 class="text-xl text-brand-dark-dark dark:text-brand-white">Programming Languages</h3>
-      </div>
-    </section> -->
+
+    </section>
+
+    <!-- THE LATEST COURSES  -->
+    <section class="w-screen max-sm:w-full h-auto py-8 flex items-center justify-center flex-col gap-16 max-sm:flex-wrap max-sm:justify-center max-sm:gap-8 mb-6 bg-brand-dark-dark/10 dark:bg-brand-white/10">
+      <h2 class="w-full text-3xl text-brand-dark-dark dark:text-brand-white font-semibold text-center">Latest Courses</h2>
+      <P class="w-full text-lg text-brand-dark-dark/70 dark:text-brand-white/70 text-center">Take a look at Code Draw’s course categories and start from whichever one interests you the most.</P>
+
+      <!-- the cards of the latest courses -->
+       <div class="w-full h-auto flex items-center justify-center gap-2 flex-wrap">
+        <div class="w-60 h-96 flex flex-col items-center justify-evenly gap-4 ">
+          <img class="w-full h-60 object-cover rounded-2xl border border-brand-dark-dark/30 dark:border-brand-white/30 shadow-lg shadow-brand-dark-dark/20" src="assets/images/designs/hero-cards/01.jpg" alt="">
+          <div class="w-full flex items-center justify-between">
+            <span class="">Basic to Advanced</span>
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3 class="w-full truncate line-clamp-2 text-ellipsis text-sm text-brand-dark-dark/70 dark:text-brand-white/70 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+          <div class="w-full flex items-center justify-between flex-col">
+            <div class="w-full flex flex-row items-center gap-2"><i class="fa-regular fa-clock"></i><span>00</span>:<span>10</span>:<span>00</span></div>
+            <div class="w-full flex flex-row items-center gap-2"><i class="fa-regular fa-user"></i><span>Mohammad</span></div>
+          </div>
+          <div class="">
+            <button type="button"><i></i></button>
+            <div class=""><span></span><span></span></div>
+          </div>
+        </div>
+       </div>
+    </section>
      
     
 
     <!-- the footer section   -->
-    <footer class="w-screen h-auto py-8 flex items-center justify-center gap-10 border-t border-brand-dark-dark/30 dark:border-brand-white/30">
-      <div class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">
-        &copy; 2026 Code Draw. All rights reserved.
-      </div>
-      <ul class="flex flex-row items-center gap-6 text-sm text-brand-dark-dark/70 dark:text-brand-white/70">
-        <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Privacy Policy</a></li>
-        <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Terms of Service</a></li>
-        <li><a href="#" class="hover:text-brand-dark-dark dark:hover:text-brand-white transition-colors">Contact Us</a></li>
-      </ul>
+    <footer class="w-screen h-auto flex items-center justify-between flex-col py-6 px-2 max-sm:px-2">
+      
     </footer>
+    
 
 
     <script src="./assets/scripts/main.js"></script>

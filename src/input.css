@@ -373,4 +373,38 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  .active{
+    color: var(--color-brand-red);
+  }
+
+  
+
+  /* مخفی کردن پیشفرض */
+  .scroll-container::-webkit-scrollbar {
+    width: 0px;
+    transition: width 0.3s ease;
+  }
+
+  /* وقتی هاور شود، ظاهر شود */
+  .scroll-container:hover::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* ترک (پس زمینه) */
+  .scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* دسته اسکرول */
+  .scroll-container::-webkit-scrollbar-thumb {
+    background: #dc2626; /* سرخ */
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+
+  /* وقتی روی خود اسکرول هم هاور شود */
+  .scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #b91c1c; /* سرخ تیره‌تر */
+  }
 }
