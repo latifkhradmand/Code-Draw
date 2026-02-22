@@ -37,7 +37,7 @@
           <li class="w-full flex items-center justify-center "><a href="../index.html"><i class="fas fa-envelope mr-2 text-2xl text-brand-dark-dark/90 dark:text-brand-white/70 hover:text-brand-red-light hover:scale-150 transition-all duration-300 active:text-3xl active:text-brand-red"></i></a></li>
         </ul>
 
-        <div class="w-24 h-16 cursor-pointer mb-4 flex items-center justify-center dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-xl bg-brand-red-dark/10 rounded-xl">
+        <div id="settings" class="w-24 h-16 cursor-pointer mb-4 flex items-center justify-center dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-xl bg-brand-red-dark/10 rounded-xl">
           <i class="fas fa-gear text-2xl text-brand-dark-dark/70 dark:text-brand-white/70 hover:text-brand-yellow transition-all duration-300 active:text-3xl active:text-brand-yellow"></i>
         </div>
       </aside>
@@ -61,7 +61,7 @@
             <i class="fa fa-moon text-2xl text-brand-dark-dark/70 dark:text-brand-white/70 hover:text-brand-yellow transition-all duration-300 active:text-3xl active:text-brand-yellow"></i>
           </div>
 
-          <div class="w-16 h-16 cursor-pointer mr-5 flex items-center justify-center dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-sm bg-brand-red-dark/10 rounded-full">
+          <div id="profile-btn" class="w-16 h-16 cursor-pointer mr-5 flex items-center justify-center dark:shadow-brand-dark-dark shadow-brand-red-dark/20 shadow-sm bg-brand-red-dark/10 rounded-full">
             <i class="fa-solid fa-user text-2xl text-brand-dark-dark/70 dark:text-brand-white/70 hover:text-brand-yellow transition-all duration-300 active:text-3xl active:text-brand-yellow"></i>
           </div>
         </div>
@@ -69,7 +69,7 @@
 
 
       <!-- CONTENT  -->
-      <section class="w-[calc(100%-165px)] max-sm:w-full h-[calc(100%-150px)] px-10 backdrop-blur-2xl fixed right-3 max-sm:right-0 top-28 max-sm:top-32 
+      <section id="content" class="w-[calc(100%-165px)] max-sm:w-full h-[calc(100%-150px)] px-10 backdrop-blur-2xl fixed right-3 max-sm:right-0 top-28 max-sm:top-32 
         overflow-auto grid grid-cols-12 gap-5
         scroll-smooth scroll-container hidden">
 
@@ -86,7 +86,7 @@
 
 
       <!-- the profile setting -->
-      <section class="w-[calc(100%-165px)] max-sm:w-full h-[calc(100%-150px)]  backdrop-blur-2xl fixed right-3 max-sm:right-0 top-28 max-sm:top-32 
+      <section id="profile" class="w-[calc(100%-165px)] max-sm:w-full h-[calc(100%-150px)]  backdrop-blur-2xl fixed right-3 max-sm:right-0 top-28 max-sm:top-32 
         overflow-auto grid grid-cols-12 gap-5
         scroll-smooth scroll-container bg-white/70 rounded-2xl shadow-2xl">
         <div class="col-span-4 h-full flex flex-col items-center justify-start py-10 px-5 rounded-3xl shadow-2xl shadow-brand-red-dark/20 ">
@@ -128,18 +128,18 @@
           </div>
 
           <!-- the profile setting -->
-          <div class="w-full flex flex-col items-center justify-center gap-4 mt-10 px-5">
+          <!-- <div class="w-full flex flex-col items-center justify-center gap-4 mt-10 px-5">
             <div class="w-full flex flex-row items-center justify-between border-b border-brand-dark-dark/30 dark:border-brand-white/30">
               <span class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">Change Profile</span>
-              <button class="btn-primary">Change Profile</button>
+              <button class="bg-brand-dark-dark/10 dark:bg-brand-white/10 px-6 py-2 rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30">Change Profile</button>
             </div>
 
             <div class="w-full flex flex-row items-center justify-between border-b border-brand-dark-dark/30 dark:border-brand-white/30">
               <span class="text-sm text-brand-dark-dark/70 dark:text-brand-white/70">Change Password</span>
-              <button class="">Change Password</button>
+              <button class="bg-brand-dark-dark/10 dark:bg-brand-white/10 px-6 py-2 rounded-lg border border-brand-dark-dark/30 dark:border-brand-white/30">Change Password</button>
             </div>
 
-          </div>
+          </div> -->
 
 
         </div>
@@ -150,6 +150,7 @@
     <script src="../assets/scripts/main.js"></script>
     <!-- <script src="../assets/scripts/student-logs.js"></script> -->
      <script src="../assets/scripts/cahrts.js"></script>
+     <script src="../assets/scripts/dashboard.js"></script>
 
   </body>
 </html>
